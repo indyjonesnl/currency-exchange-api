@@ -1,0 +1,63 @@
+{
+    "name": "indyjonesnl/currency-exchange-api",
+    "description": "API to provide cached currency exchange rates",
+    "type": "project",
+    "require": {
+        "php": "^8.1",
+        "ext-zend-opcache": "*",
+        "moneyphp/money": "^4.0",
+        "symfony/cache": "*",
+        "symfony/console": "*",
+        "symfony/dom-crawler": "*",
+        "symfony/dotenv": "*",
+        "symfony/flex": "^2.2",
+        "symfony/framework-bundle": "*",
+        "symfony/http-client": "*",
+        "symfony/monolog-bundle": "^3.8",
+        "symfony/runtime": "*",
+        "symfony/serializer": "*",
+        "symfony/yaml": "*"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.9",
+        "phpstan/phpstan-symfony": "^1.2",
+        "phpunit/phpunit": "^9.5",
+        "symfony/phpunit-bridge": "^6.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "App\\Tests\\": "tests/"
+      }
+    },
+    "authors": [
+        {
+            "name": "Indy Jones",
+            "email": "indyjonesnl@gmail.com"
+        }
+    ],
+    "scripts": {
+        "auto-scripts": {
+            "cache:clear": "symfony-cmd",
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "symfony/flex": true,
+            "symfony/runtime": true
+        }
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": true,
+            "require": "6.1.*"
+        }
+    }
+}
